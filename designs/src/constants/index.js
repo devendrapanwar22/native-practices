@@ -1,0 +1,8 @@
+export {default as Login} from '../screens/Login/Login'
+export {default as Home} from '../screens/Home/Home'
+export {default as Register} from '../screens/Register/Register'
+export {default as ForgetPassword} from '../screens/ForgetPassword/ForgetPassword'
+export {default as SetPassword} from '../screens/SetPassword/SetPassword'
+export {default as ChooseAccount} from '../screens/ChooseAccount/ChooseAccount'
+export {default as Profile} from '../screens/Profile/Profile'
+export {default as Bookings} from '../screens/Bookings/Bookings'
