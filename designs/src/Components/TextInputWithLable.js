@@ -5,8 +5,9 @@ import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 const TextInputWithLable = ({
     lable,
+    value,
     placeHolder,
-    onChangeText = () => {},
+    onChangeText,
     inputStyle={},
     keyboardType,
     righticon,
@@ -17,7 +18,7 @@ const TextInputWithLable = ({
         <View style={{...styles.inpurcontainer,...inputStyle}}>
             <Text style={styles.LableTextStyle}>{lable}</Text>
             <View style={{flexDirection:'row',flexWrap:"wrap",justifyContent:"space-between"}}>
-            <TextInput  style={{flex:1}} placeholder={placeHolder} keyboardType={keyboardType} {...props} />
+            <TextInput onChangeText={onChangeText} value={value} style={{flex:1}} placeholder={placeHolder} keyboardType={keyboardType} {...props} />
             <MaterialCommunityIcons name={righticon} size={24} color="black" onPress={onpressright}/>
             </View>
         </View>

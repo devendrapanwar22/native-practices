@@ -1,11 +1,9 @@
 import { View, Text, SafeAreaView, StyleSheet, FlatList, Image, TouchableOpacity } from 'react-native'
-import React, { useState } from 'react'
+import React from 'react'
 import { useGetAllProductsQuery } from './Redux/service'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
-import { addToCart, incrementQuantity, removeFromCart } from './Redux/cartReducer'
-import { configureStore } from '@reduxjs/toolkit'
-
+import { addToCart, removeFromCart } from './Redux/cartReducer'
 
 const Products = () => {
 

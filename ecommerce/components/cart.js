@@ -1,5 +1,5 @@
 import { View, Text, SafeAreaView, StyleSheet, FlatList, Image, TouchableOpacity } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { decrementQuantity, incrementQuantity, removeFromCart,gettotalammount } from './Redux/cartReducer';
 

@@ -1,18 +1,18 @@
 import { FlatList, SafeAreaView, StyleSheet, Text, View, Image } from 'react-native'
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from '../../constants/Style/styles'
 import dummydata from './DummyData'
 import { moderateScale, moderateVerticalScale, scale } from 'react-native-size-matters'
 import colors from '../../constants/Colors'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import ButtonComp from '../../Components/ButtonComp'
+import { Authcontext } from '../../Nativation/Authcontext/Authcontext'
 const Home = () => {
 
   const RenderItem = ({ item }) => {
-    console.log(item.item.id)
     let data = item.item;
     return (
-      <View style={styless.flatstylye}>
+      <SafeAreaView style={styless.flatstylye}>
         <View style={styless.contentbox}>
           <View>
             <Text style={{ fontSize: moderateScale(12), color: 'black' }}>{data?.date}</Text>
@@ -41,16 +41,17 @@ const Home = () => {
           </View>
 
         </View>
-      </View>
+      </SafeAreaView>
     )
   }
+  const {logout} = useContext(Authcontext);
   return (
     <View style={styles.container}>
       <SafeAreaView style={styles.container}>
         <View style={styless.headerstyle}>
           <Text />
           <Text style={styless.Headertext}>Nanny Line</Text>
-          <MaterialCommunityIcons name='bell-outline' size={25} color={colors.theamecolor} />
+          <MaterialCommunityIcons name='bell-outline' size={25} color={colors.theamecolor} onPress={()=>logout()} />
         </View>
         <View style={{
           marginTop: moderateVerticalScale(14),

@@ -8,14 +8,14 @@ import { MaterialCommunityIcons } from '@expo/vector-icons'
 const ButtonComp = ({
     btntext,
     btnstyle = {},
-    onPressbtn = {},
+    onPressbtn,
     image,
     btntextstyle={}
 }) => {
     const navigation = useNavigation();
     return (
         <View style={{ marginTop: moderateScale(25), alignItems: 'center', width: '100%' }}>
-            <TouchableOpacity style={{ ...styles.btnStyle, ...btnstyle }} onPress={onPressbtn}>
+            <TouchableOpacity style={{ ...styles.btnStyle, ...btnstyle }} onPress={onPressbtn?onPressbtn:()=>alert('no action')}>
                 {
                     image ? <MaterialCommunityIcons name={'arrow-right'} size={40} color="#fff" />
                         : <Text style={{...styles.btntextstyle,...btntextstyle}}>{btntext}</Text>

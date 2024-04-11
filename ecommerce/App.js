@@ -15,6 +15,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
+      <StatusBar backgroundColor="white" barStyle="dark-content" />
         <NavigationContainer>
           <stack.Navigator>
             <stack.Screen
