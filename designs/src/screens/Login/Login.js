@@ -12,7 +12,7 @@ import { Authcontext } from '../../Nativation/Authcontext/Authcontext';
 const Login = () => {
     const navigation = useNavigation();
     const [isvisible, setvisible] = useState(true)
-    const {login} = useContext(Authcontext);
+    const {signIn} = useContext(Authcontext);
     const [email,setEmail]= useState('');
     const [password,SetPassword] = useState('');
 
@@ -32,7 +32,7 @@ const Login = () => {
                     </TouchableOpacity>
 
                     <View style={{ flex: 1, marginTop: moderateVerticalScale(30) }}>
-                        <ButtonComp btntext={"Login"} btnstyle={{ width: '100%' }} onPressbtn={() => {login(email,password)}} />
+                        <ButtonComp btntext={"Login"} btnstyle={{ width: '100%' }} onPressbtn={() => {signIn(email,password)}} />
                     </View>
                 </View>
 

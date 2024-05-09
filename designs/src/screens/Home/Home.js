@@ -44,14 +44,14 @@ const Home = () => {
       </SafeAreaView>
     )
   }
-  const {logout} = useContext(Authcontext);
+  const {signOut} = useContext(Authcontext);
   return (
     <View style={styles.container}>
       <SafeAreaView style={styles.container}>
         <View style={styless.headerstyle}>
           <Text />
           <Text style={styless.Headertext}>Nanny Line</Text>
-          <MaterialCommunityIcons name='bell-outline' size={25} color={colors.theamecolor} onPress={()=>logout()} />
+          <MaterialCommunityIcons name='bell-outline' size={25} color={colors.theamecolor} onPress={()=>signOut()} />
         </View>
         <View style={{
           marginTop: moderateVerticalScale(14),

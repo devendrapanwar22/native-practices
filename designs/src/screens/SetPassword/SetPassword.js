@@ -27,7 +27,7 @@ const SetPassword = ({}) => {
         <TextInputWithLable value={password} onChangeText={(text) => setPassword(text)} lable={'SetPassword'} placeHolder={"Enter your password"} secureTextEntry={isActive} onpressright={() => setActive(!isActive)} righticon={isActive ? 'eye' : 'eye-off'} inputStyle={{ marginVertical: moderateScale(50) }} />
         <ButtonComp btntext={'Continue'} btnstyle={{ width: '100%' }} onPressbtn={() => signUp(recivedData,password,navigation)} />
         <View style={styless.btncontainer}>
-          <ButtonComp onPressbtn={() => signUp()} image={image} btnstyle={{ height: moderateScale(56), width: moderateScale(56), borderRadius: moderateScale(56 / 2), alignSelf: 'flex-end' }} />
+          <ButtonComp onPressbtn={() => signUp(recivedData,password,navigation)} image={image} btnstyle={{ height: moderateScale(56), width: moderateScale(56), borderRadius: moderateScale(56 / 2), alignSelf: 'flex-end' }} />
         </View>
       </View>
     </SafeAreaView>
